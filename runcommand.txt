@@ -1,0 +1,6 @@
+docker run --rm -p 8080:8080 \
+  --cap-drop ALL \
+  --security-opt no-new-privileges:true \
+  --read-only \
+  --tmpfs /tmp:rw,noexec,nosuid,size=64m \
+  ghcr.io/osaljehani/secureimage:latest
